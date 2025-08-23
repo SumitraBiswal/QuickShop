@@ -1,5 +1,3 @@
-
-
 import Footer from "./Footer";
 import Heading from "../../usablecomponent/Heading"
 import style from "./Product.module.css"
@@ -19,17 +17,17 @@ function shuffledArray(array){
 }
     
 
-export default function Product({quantities,increament,decrement,totalCartCount}){
+export default function Product({quantities,increment,decrement,totalCartCount}){
     const shuffledSubCategories=shuffledArray(subCategories);
 return (
     <div>
         <Navbar totalCartCount={totalCartCount}/>
         <div className={style.mainContent}>
-            <Heading colortitle="All" noncolortitle="PRDUCT"/>
+            <Heading colortitle="All" noncolortitle="PRODUCT"/>
             <SubcategoryList
             subCategories={shuffledSubCategories}
             quantities={quantities}
-            increament={increament}
+            increment={increment}
             decrement={decrement}/>
 
         </div>

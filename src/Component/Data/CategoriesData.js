@@ -7,31 +7,31 @@ const categories =[
     {
         id: 1,
         title :"Fruits",
-        Image: category2,
+        image: category2,
 
     },
     {
         id: 2,
         title :"Vegetables",
-        Image: category1,
+        image: category1,
 
     },
     {
         id: 3,
         title :"Dairy",
-        Image: category3,
+        image: category3,
 
     },
     {
         id: 4,
         title :"Bakery",
-        Image: category4,
+        image: category4,
 
     },
     {
         id: 5,
         title :"Beverages",
-        Image: category5,
+        image: category5,
 
     },
 ];

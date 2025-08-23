@@ -14,7 +14,7 @@ export default function Cart({ cartItems=[], increment, decrement }) {
     if (cartItems.length === 0) {
         return (<>
             <Navbar totalCartCount={0} />
-            <div calassname={style.emptyCart}>Your Cart is Empty.</div>
+            <div calassName={style.emptyCart}>Your Cart is Empty.</div>
             <Footer />
         </>);
     }
@@ -24,7 +24,7 @@ export default function Cart({ cartItems=[], increment, decrement }) {
             <div className={style.CartWrapper}>
                 <h2 className={style.heading}>your Cart</h2>
                 <ul className={style.cartList}>
-                    {cartItem.map(({ id, title, image, price, discount, quantity }) => {
+                    {cartItems.map(({ id, title, image, price, discount, quantity }) => {
                         const discountedPrice = price - discount;
                         const subtotal = discountedPrice * quantity;
                         return (
@@ -36,14 +36,14 @@ export default function Cart({ cartItems=[], increment, decrement }) {
                                         price: ₹{discountedPrice.toFixed(2)}
                                     </p>
                                     <div className={style.quantityControl}>
-                                        <button className={styl.qtyBtn}
+                                        <button className={style.qtyBtn}
                                             onClick={() => decrement(id)}
                                             aria-label={'Decrease quantity of ${title}'}>-</button>
 
                                         <span className={style.quantityDisplay}>
                                             {quantity}
                                         </span>
-                                        <button className={stlye.qtyBtn}
+                                        <button className={style.qtyBtn}
                                             onClick={() => increment(id)}
                                             aria-label={'Increase quantity of ${title}'}>
                                             +
@@ -67,6 +67,7 @@ export default function Cart({ cartItems=[], increment, decrement }) {
                 <button className={style.checkoutBtn}
                     onClick={() => alert("Proceed to checkout")}
                     aria-label="Proceed to checkout">
+                        Checkout
 
                 </button>
 

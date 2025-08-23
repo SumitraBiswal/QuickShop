@@ -24,13 +24,13 @@ export default function HomePage({quantities,increment,decrement,totalCartCount}
             
             <Heading colortitle="shop"noncolortitle="by category"/>
             <Card categories={categories}/>
-             <Heading colortitle="Seasonl"noncolortitle="Fruit Collection"/>
+             <Heading colortitle="Seasonal"noncolortitle="Fruit Collection"/>
              <VegetableCard
              quantities={quantities}
              increment={increment}
              decrement={decrement}
              />
-              <Heading colortitle="Seasonal Fram-Fresh "noncolortitle="Vegetables"/>
+              <Heading colortitle="Seasonal Farmm-Fresh "noncolortitle="Vegetables"/>
               <FruitCard quantities={quantities} increment={increment} decrement={decrement}/>
                <Heading colortitle="find"noncolortitle="what you Need"/>
                <SubcategoryList 

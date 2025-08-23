@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #ffffff;
+    background-color: #43ac59;
     padding: 12px 30px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
     font-family: "Poppins", sans-serif;
@@ -13,6 +13,7 @@
     width: 100%;
     z-index: 9999;
     flex-wrap: nowrap; 
+    font-size: large;
   }
   
   .logo {
@@ -37,7 +38,7 @@
   
   .logoImg {
     width: auto;
-    height: 20px;
+    height: 60px;
     object-fit: contain;
     
   }
@@ -301,7 +302,7 @@
   }
   
   .sidebarNavlinks a:hover {
-    color: #4caf50;
+    color: #5abe5a;
     text-decoration: none;
   }
   
@@ -345,9 +346,10 @@
   }
   
   .sidebarLogo .logo {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 700;
-    color: #002147;
+    font-style: oblique;
+    color: #02000e;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -355,11 +357,11 @@
   }
   
   .logoHighlight {
-    color: #4caf50; 
+    color: #278004; 
     font-weight: 900;
     font-style: italic;
     font-family: "Poppins", sans-serif;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    text-shadow: 1px 1px 2px rgba(26, 121, 3, 0.596);
   }
   
 

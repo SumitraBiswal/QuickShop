@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 export default function Card({categories=[]}) {
     const navigate=useNavigate();
     const handleCategoryClick=(categoryId)=>{
-        navigate('/subcategory/${categoryId}');
+        navigate(`/subcategory/${categoryId}`);
     };
 
   return (

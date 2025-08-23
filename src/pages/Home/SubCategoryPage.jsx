@@ -11,7 +11,7 @@ import Footer from "./Footer";
 
 export default function SubCategoryPage({quantities,increment,decrement}) {
     const {categoryId}=useParams();
-    filterSubs=subCategories.filter(
+   const filterSubs=subCategories.filter(
         (sub)=>sub.categoryId===Number(categoryId)
     );
     const totalCartCount= Object.values(quantities).reduce((a, b)=>a + b,0);

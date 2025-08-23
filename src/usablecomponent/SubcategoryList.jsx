@@ -31,13 +31,13 @@ export default function SubcategoryList({subCategories,increment,decrement,quant
             <div className={style.qtyControls}>
             <button className={style.qtyBtn }
              onClick={()=> decrement(id)}
-           aria-label = {'decrease quantity of $ {title}'}>
+           aria-label = {`decrease quantity of ${title}`}>
            -
            </button>
           <span className ={style.qtyDisplay}>{qty} </span>
            <button className={style.qtyBtn }
             onClick={()=> increment(id)}
-          aria-label = {'decrease quantity of $ {title}'}>
+          aria-label = {`increase quantity of ${title}`}>
          +
          </button>
          </div>)}

@@ -10,7 +10,7 @@ export default function About({quantites={}}){
     return(
         <>
         <Navbar totalCartCount={totalCartCount}/>
-        <main className={style.AboutContainer}>
+        <main className={style.aboutContainer}>
 <h1> About Us</h1>
 <p>
 “Welcome to [QuickShop], your trusted partner for all things grocery! We’re here to bring you the freshest fruits,

@@ -9,7 +9,7 @@ import style from './Navbar.module.css'
 
 
 
-export default function Navbar({ totalCartcount }) {
+export default function Navbar({ totalCartCount }) {
     const [sidebarOpen, setsidebarOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
     const [searchTerm, setSearchTerm] = useState("");
@@ -41,7 +41,7 @@ export default function Navbar({ totalCartcount }) {
     useEffect(() => {
         const term = searchTerm.trim().toLowerCase();
 
-        if (term === " ") {
+        if (term ==="") {
             setSearchResults([]);
             return;
         }
@@ -55,7 +55,7 @@ export default function Navbar({ totalCartcount }) {
         setSearchTerm("");
         setSearchResults([]);
         setsidebarOpen(false);
-        navigate('/subCategory/${sub.categoryId}');
+        navigate('/subcategory/${sub.categoryid}');
     }
     return (
         <>
@@ -67,11 +67,11 @@ export default function Navbar({ totalCartcount }) {
                     onClick={() => setsidebarOpen(false)}>
                     <p className={style.logo}>
                         <span className={style.logoHightlight}>Quick</span>Shop
-                        <img src={logo} alt="Logo" className={style.logoimg} />
+                        <img src={logo} alt="Logo" className={style.logoImg} />
                     </p>
                 </NavLink>
                 {!isMobile && (
-                    <ul className={style.navlink}>
+                    <ul className={style.navlinks}>
                         <li>
                             <NavLink
                                 to='/'
@@ -145,12 +145,12 @@ export default function Navbar({ totalCartcount }) {
                     <div className={style.cart}>
                         <NavLink
                             to="/message"
-                            className={({ isActive, isPanding }) =>
-                                isPanding ? "Panding" : isActive ? "Active" : ""
+                            className={({ isActive, isPending }) =>
+                                isPending ? "Pending" : isActive ? "Active" : ""
                             }
                         >
                             <BsCart4/>
-                            <span className={style.cartCount}>{totalCartcount}</span>
+                            <span className={style.cartCount}>{totalCartCount}</span>
 
                         </NavLink>
                     </div>

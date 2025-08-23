@@ -1,13 +1,127 @@
-.mainContent{
-    margin-top: 100px;
+.mainContent {
+  margin-top: 100px; 
+  padding: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Poppins", sans-serif;
 }
-@media (max-width :500px){
-    .mainContent{
-        margin-top: 80px;
-    }
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
-@media(max-width :500px){
-    .mainContent{
-        margin-top: 150px;
-    }
+
+.productCard {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.productImage {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.productTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #002147;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.productPrice {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #4caf50;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.cartControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.qtyBtn {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #4caf50;
+  background: white;
+  color: #4caf50;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.qtyBtn:hover {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.qtyDisplay {
+  font-size: 1.2rem;
+  font-weight: 600;
+  min-width: 32px;
+  text-align: center;
+}
+
+/* 📱 Responsive tweaks */
+@media (max-width: 850px) {
+  .mainContent {
+    margin-top: 80px;
+    padding: 1.5rem;
+  }
+
+  .productCard {
+    width:250px;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease,box-shadow 0.2s ease;
+
+  }
+}
+
+@media (max-width: 500px) {
+  .mainContent {
+    margin-top: 150px;
+    padding: 1rem;
+  }
+
+  .productsGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .productTitle{
+    font-size: 1rem;
+  }
+  .productPrice{
+    font-size: 1rem;
+  }
 }

@@ -1,15 +1,17 @@
 import { useState } from "react";
+
 import Home from './pages/Home/HomePage'
-import {Routes,Route } from 'react-router-dom';
+import  {  Routes,Route } from 'react-router-dom';
 import Cart from './pages/Cart/Cart';
 
 import SubCategoryPage from "./pages/Home/SubCategoryPage";
 import About from './pages/Home/About';
 import Product from './pages/Home/Product';
 import ProductPage from "./pages/Home/ProductPage"
-import Contact from "./pages/Home/contact";
 import subCategories from "./Component/Data/subCategories";
 import ScrollToTop from "./pages/Home/ScrollToTop";
+import Contact from "./pages/Home/contact";
+
 
 
 
@@ -59,7 +61,7 @@ setQuantities(prev=>{
       path="/message"
       element={
         <Cart
-        cartItem={cartItem}
+        cartItems={cartItem}
         increament={increament }
         decrement={decrement}
         totalCartCount={totalCartCount}
@@ -67,7 +69,7 @@ setQuantities(prev=>{
       }
       />
       <Route
-      path="/subCatogory/:categoryId"
+      path="/subcatogory/:categoryid"
       element={
         <SubCategoryPage
         quantities={quantities}
