@@ -1,0 +1,43 @@
+.headingContainer {
+    text-align: center;
+    margin: 2rem 0;
+    font-family: 'Arial', sans-serif;
+    padding: 10px 0;
+  }
+  
+  .headingContainer h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .headingContainer h1 span {
+    color: #4CAF50; 
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  
+  @media (max-width: 850px) {
+    .headingContainer {
+      margin: 1.5rem 0;
+    }
+    .headingContainer h1 {
+      font-size: 2rem;
+    }
+    .headingContainer h1 span {
+      letter-spacing: 0.08em;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .headingContainer {
+      margin:  1rem 0; 
+    
+    }
+    .headingContainer h1 {
+      font-size: 2rem;
+    }
+    .headingContainer h1 span {
+      letter-spacing: 0.05em;
+    }
+  }

@@ -1,0 +1,97 @@
+.aboutContainer {
+  max-width: 90rem;
+  margin: 12rem auto 5rem; 
+  padding: 3rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  background-color: #fff;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
+}
+
+.aboutContainer h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.aboutContainer p {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  margin-bottom: 1.6rem;
+  color: #444;
+  max-width: 70rem; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aboutContainer h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: #333;
+  border-bottom: 0.2rem solid #e0e0e0;
+  padding-bottom: 0.3rem;
+  max-width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.aboutContainer ul {
+  max-width: 70rem;
+  margin: 1rem auto 0 auto;
+  padding-left: 1.8rem;
+  color: #555;
+  font-size: 1.5rem;
+  list-style-type: disc;
+}
+
+.aboutContainer ul li {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 850px) {
+  .aboutContainer {
+    margin: 18rem 1rem 4rem; 
+    padding: 2.5rem 1.5rem;
+  }
+
+  .aboutContainer h1 {
+    font-size: 2.6rem;
+  }
+
+  .aboutContainer p,
+  .aboutContainer ul {
+    font-size: 1.5rem;
+    max-width: 100%;
+  }
+
+  .aboutContainer h2 {
+    font-size: 1.9rem;
+    max-width: 100%;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .aboutContainer {
+    margin: 16rem 1rem 3rem;
+    padding: 2rem 1rem;
+  }
+
+  .aboutContainer h1 {
+    font-size: 2.2rem;
+  }
+
+  .aboutContainer p,
+  .aboutContainer ul {
+    font-size: 1.4rem;
+  }
+
+  .aboutContainer h2 {
+    font-size: 1.6rem;
+  }
+}

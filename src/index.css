@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   font-family: "Merriweather", serif;
+}
+
+html {
+  font-size: 62.5%; 
+}
+.container {
+  width: 80%;
+  margin: 0 auto; /* centers the container */
+  display: block;
+}
+/* .container {
+  padding-top: 40px; /* adjust according to your navbar height 
+} */
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+    margin: 0 auto; /* centers the container */
+    display: block;
+  }
+}
