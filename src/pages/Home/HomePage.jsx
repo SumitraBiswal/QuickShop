@@ -5,10 +5,8 @@ import VegetableCard from '../../usablecomponent/VegetableCard';
 import Heading from '../../usablecomponent/Heading';
 import categories from '../../Component/Data/CategoriesData';
 import SubcategoryList from '../../usablecomponent/SubcategoryList';
-import Cart from '../Cart/Cart';
 import About from './About';
 import Contact from './contact';
-import Footer from './Footer';
 import subCategories from '../../Component/Data/subCategories';
 
 
@@ -40,8 +38,8 @@ export default function HomePage({quantities,increment,decrement,totalCartCount}
         </div>
         <Contact/>
         <About/>
-        <Cart/>
-        <Footer/>
+        
+        
         
     </div>
   )

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import style from './Contact.module.css'
-import Footer from './Footer';
 import Navbar from '../../Component/Navbar';
 
 export default function Contact({ quantities }) {
@@ -65,7 +64,7 @@ export default function Contact({ quantities }) {
 
         {result && <p className={style.resultMessage}>{result}</p>}
       </div>
-      <Footer />
+      
     </>
   );
 }

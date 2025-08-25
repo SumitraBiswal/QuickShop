@@ -1,7 +1,5 @@
 
 import Navbar from "../../Component/Navbar";
-import Footer from "../Home/Footer";
-
 import style from "./Cart.module.css"
 
 export default function Cart({ cartItems=[], increment, decrement }) {
@@ -15,7 +13,7 @@ export default function Cart({ cartItems=[], increment, decrement }) {
         return (<>
             <Navbar totalCartCount={0} />
             <div calassName={style.emptyCart}>Your Cart is Empty.</div>
-            <Footer />
+            
         </>);
     }
     return (
@@ -70,9 +68,9 @@ export default function Cart({ cartItems=[], increment, decrement }) {
                         Checkout
 
                 </button>
-
+            
             </div>
-            <Footer />
+        
         </>
     );
 

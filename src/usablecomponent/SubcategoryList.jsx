@@ -1,4 +1,4 @@
-{/*import style from './SubcategoryCard.module.css'
+import style from './SubcategoryList.module.css'
 import Navbar from '../Component/Navbar';
 export default function SubcategoryList({subCategories,increment,decrement,quantities}) {
   const totalCartCount=Object.values(quantities).reduce((a, b)=>a+b ,0);
@@ -50,7 +50,7 @@ export default function SubcategoryList({subCategories,increment,decrement,quant
     </>
   );
 }
-*/}
+{/*
 import style from './SubcategoryCard.module.css';
 
 
@@ -63,23 +63,23 @@ export default function SubcategoryList({ subCategories, increment, decrement, q
 
         return (
           <div key={id} className={style.cardcontainer}>
-            {/* Image Section */}
+          
             <div className={style.imagesection}>
               <img src={image} alt={title} />
             </div>
 
-            {/* Title */}
+          
             <div className={style.title}>
               <h1>{title}</h1>
             </div>
 
-            {/* Price */}
+            
             <div className={style.priceSection}>
               <span className={style.originalPrice}>₹{price}</span>
               <span className={style.discountedPrice}>₹{discountedPrice}</span>
             </div>
 
-            {/* Add to Cart / Quantity Controls */}
+            
             {qty === 0 ? (
               <button className={style.addToCartBtn} onClick={() => increment(id)}>
                 Add to cart
@@ -101,4 +101,4 @@ export default function SubcategoryList({ subCategories, increment, decrement, q
     </div>
   );
 }
-
+*/}

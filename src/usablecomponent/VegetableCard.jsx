@@ -4,7 +4,7 @@ import style from './VegetableCard.module.css'
 
 
 export default function VegetableCard({quantities,increment,decrement}) {
-    const vegetables=subCategories.filter(item=>item.categoryId===1);
+    const vegetables=subCategories.filter(item=>item.categoryId===2);
   return (
     <div className={style.container}>
         {vegetables.map(({id,title,image,price,discount})=>{

@@ -1,7 +1,7 @@
 
 import Navbar from "../../Component/Navbar";
 import style from './About.module.css'
-import Footer from './Footer';
+
 
 
 export default function About({quantites={}}){
@@ -40,7 +40,7 @@ reliable, and convenient way to shop. Our journey started with a mission to comb
  secure payments, and top-quality products, weare reshaping the way you shop for your everyday needs."
 </p>
         </main>
-        <Footer/>
+        
         </>
     )
 }

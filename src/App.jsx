@@ -11,6 +11,8 @@ import ProductPage from "./pages/Home/ProductPage"
 import subCategories from "./Component/Data/subCategories";
 import ScrollToTop from "./pages/Home/ScrollToTop";
 import Contact from "./pages/Home/contact";
+import Footer from "./pages/Home/Footer";
+import Navbar from "./Component/Navbar";
 
 
 
@@ -44,6 +46,7 @@ setQuantities(prev=>{
   }));
   return (
     <>
+    <Navbar totalCartCount={totalCartCount}/>
     <ScrollToTop/>
     <Routes>
       <Route
@@ -51,7 +54,7 @@ setQuantities(prev=>{
       element={
         <Home
         quantities={quantities}
-        increament={increment }
+        increment={increment }
         decrement={decrement}
         totalCartCount={totalCartCount}
         />
@@ -62,7 +65,7 @@ setQuantities(prev=>{
       element={
         <Cart
         cartItems={cartItem}
-        increament={increment }
+        increment={increment }
         decrement={decrement}
         totalCartCount={totalCartCount}
         />
@@ -73,7 +76,7 @@ setQuantities(prev=>{
       element={
         <SubCategoryPage
         quantities={quantities}
-        increament={increment }
+        increment={increment }
         decrement={decrement}
         totalCartCount={totalCartCount}
         />
@@ -92,7 +95,7 @@ setQuantities(prev=>{
       element={
         <Product
         quantities={quantities}
-        increament={increment }
+        increment={increment }
         decrement={decrement}
         totalCartCount={totalCartCount}
         />
@@ -113,6 +116,7 @@ setQuantities(prev=>{
       }
       />
     </Routes>
+    <Footer/>
     </>
   )
 }

@@ -1,4 +1,4 @@
-import Footer from "./Footer";
+
 import Heading from "../../usablecomponent/Heading"
 import style from "./Product.module.css"
 
@@ -31,7 +31,7 @@ return (
             decrement={decrement}/>
 
         </div>
-        <Footer/>
+        
     </div>
 );
 }
