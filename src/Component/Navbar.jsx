@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { BsCart4 } from "react-icons/bs";
-
 import logo from "../assets/grocery/logo.gif"
 import { NavLink, useNavigate } from "react-router-dom"
 import subCategories from "./Data/subCategories";
@@ -55,7 +54,7 @@ export default function Navbar({ totalCartCount }) {
         setSearchTerm("");
         setSearchResults([]);
         setsidebarOpen(false);
-        navigate('/subcategory/${sub.categoryid}');
+        navigate(`/subcategory/${sub.categoryid}`);
     }
     return (
         <>
@@ -109,6 +108,20 @@ export default function Navbar({ totalCartCount }) {
                         </li>
                     </ul>
                 )}
+                <div className={style.Rightside}>
+                    <div className={style.cart}>
+                        <NavLink
+                            to="/message"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "Pending" : isActive ? "Active" : ""
+                            }
+                        >
+                            <BsCart4/>
+                            <span className={style.cartCount}>{totalCartCount}</span>
+
+                        </NavLink>
+                    </div>
+                </div>
                 {/*search bar*/}
                 <div className={style.search} style={{ position: "relative" }} ref={searchRef}>
                     <input
@@ -141,20 +154,7 @@ export default function Navbar({ totalCartCount }) {
                         </ul>
                     )}
                 </div>
-                <div className={style.Rightside}>
-                    <div className={style.cart}>
-                        <NavLink
-                            to="/message"
-                            className={({ isActive, isPending }) =>
-                                isPending ? "Pending" : isActive ? "Active" : ""
-                            }
-                        >
-                            <BsCart4/>
-                            <span className={style.cartCount}>{totalCartCount}</span>
-
-                        </NavLink>
-                    </div>
-                </div>
+               
                 {isMobile && (
                     <button
                         className={style.menuButton}
@@ -172,7 +172,7 @@ export default function Navbar({ totalCartCount }) {
                         <button
                             className={style.closeBtn}
                             onClick={() => setsidebarOpen(false)}
-                            aria-label="Close Menu"
+                            aria-label="close menu"
                         >&times</button>
                         <ul className={style.sidebarNavlinks} >
                             <li>

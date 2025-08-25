@@ -1,7 +1,8 @@
 
 import Navbar from "../../Component/Navbar";
 import style from './About.module.css'
-import Footer from './Footer'
+import Footer from './Footer';
+
 
 export default function About({quantites={}}){
     
@@ -10,7 +11,7 @@ export default function About({quantites={}}){
     return(
         <>
         <Navbar totalCartCount={totalCartCount}/>
-        <main className={style.aboutContainer}>
+        <main className={style.aboutContainer} >
 <h1> About Us</h1>
 <p>
 “Welcome to [QuickShop], your trusted partner for all things grocery! We’re here to bring you the freshest fruits,

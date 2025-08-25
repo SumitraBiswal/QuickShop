@@ -38,14 +38,14 @@ export default function Cart({ cartItems=[], increment, decrement }) {
                                     <div className={style.quantityControl}>
                                         <button className={style.qtyBtn}
                                             onClick={() => decrement(id)}
-                                            aria-label={'Decrease quantity of ${title}'}>-</button>
+                                            aria-label={`Decrease quantity of ${title}`}>-</button>
 
                                         <span className={style.quantityDisplay}>
                                             {quantity}
                                         </span>
                                         <button className={style.qtyBtn}
                                             onClick={() => increment(id)}
-                                            aria-label={'Increase quantity of ${title}'}>
+                                            aria-label={`Increase quantity of ${title}`}>
                                             +
                                         </button>
 

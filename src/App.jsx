@@ -18,7 +18,7 @@ import Contact from "./pages/Home/contact";
 
  function App() {
   const [quantities,setQuantities]=useState({})
-  const increament =(id)=>{setQuantities (prev=>({
+  const increment =(id)=>{setQuantities (prev=>({
     ...prev,
     [id]:(prev[id]||0)+1,
   }))}
@@ -51,7 +51,7 @@ setQuantities(prev=>{
       element={
         <Home
         quantities={quantities}
-        increament={increament }
+        increament={increment }
         decrement={decrement}
         totalCartCount={totalCartCount}
         />
@@ -62,18 +62,18 @@ setQuantities(prev=>{
       element={
         <Cart
         cartItems={cartItem}
-        increament={increament }
+        increament={increment }
         decrement={decrement}
         totalCartCount={totalCartCount}
         />
       }
       />
       <Route
-      path="/subcatogory/:categoryid"
+      path="/subcategory/:categoryid"
       element={
         <SubCategoryPage
         quantities={quantities}
-        increament={increament }
+        increament={increment }
         decrement={decrement}
         totalCartCount={totalCartCount}
         />
@@ -92,7 +92,7 @@ setQuantities(prev=>{
       element={
         <Product
         quantities={quantities}
-        increament={increament }
+        increament={increment }
         decrement={decrement}
         totalCartCount={totalCartCount}
         />
