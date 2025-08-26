@@ -52,13 +52,13 @@ export default function Navbar({ totalCartCount }) {
     }, [searchTerm]);
     //handle login
     useEffect(()=> {
-        const loggedIn=
-        localStorage.getItem("isLoggedIn")==="true";
+        const loggedIn=localStorage.getItem("isLoggedIn")==="true";
         setIsLogged(loggedIn);
     },[]);
      
     //handle logout
-           const handleLogout=()=>{
+           const handleLogout=(e)=>{
+            e.preventDefault();
             localStorage.removeItem("isLoggedIn");
             setIsLogged (false);
             alert("logged out successfully");
@@ -129,15 +129,15 @@ export default function Navbar({ totalCartCount }) {
                                 Login
                                 </NavLink></li>):(
                              <li>
-                                <NavLink to="/login">
-                                <button onClick={handleLogout}
-                            className={({isActive})=>(isActive?style.activeLink:"")}>Logout</button>
+                                <NavLink to="/login"
+                                 onClick={handleLogout}
+                            className={({isActive})=>(isActive?style.activeLink:"")}>Logout
                             </NavLink>
                             </li>
                         )}
                     </ul>
                 )}
-                <div className={style.Rightside}>
+                <div className={style.rightside}>
                     <div className={style.cart}>
                         <NavLink
                             to="/message"

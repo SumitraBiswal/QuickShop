@@ -7,6 +7,7 @@
   box-shadow: 0 8px 30px rgba(34, 77, 34, 0.15);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #1a3a1a;
+  
 }
 
 .checkoutBtn {
@@ -211,6 +212,7 @@
   font-weight: 700;
   color: #669966;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
 }
 
 /* Responsive */

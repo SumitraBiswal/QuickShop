@@ -9,7 +9,7 @@ import Product from './pages/Home/Product';
 import ProductPage from "./pages/Home/ProductPage"
 import subCategories from "./Component/Data/subCategories";
 import ScrollToTop from "./pages/Home/ScrollToTop";
-import Contact from "./pages/Home/contact";
+import Contact from "./pages/Home/Contact";
 import Footer from "./pages/Home/Footer";
 import Navbar from "./Component/Navbar";
 import Login from "./pages/Home/Login";

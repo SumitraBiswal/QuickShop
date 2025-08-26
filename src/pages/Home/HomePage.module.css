@@ -99,7 +99,16 @@
 
   .banner2 img {
     width: 100%;
-    max-width: 400px;
+    max-width: 350px;
+  }
+  .bannerfull{
+    margin-top: 200px;
+  }
+  .text h2{
+    font-size: 2rem;
+  }
+  .text p{
+    font-size: 1rem;
   }
 }
 .bycategory{

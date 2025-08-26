@@ -6,9 +6,9 @@ import Heading from '../../usablecomponent/Heading';
 import categories from '../../Component/Data/CategoriesData';
 import SubcategoryList from '../../usablecomponent/SubcategoryList';
 import About from './About';
-import Contact from './contact';
+import Contact from './Contact';
 import subCategories from '../../Component/Data/subCategories';
-import Cart from '../Cart/Cart';
+
 import style from './HomePage.module.css'
 
 
@@ -30,7 +30,7 @@ export default function HomePage({quantities,increment,decrement,totalCartCount}
             </div><div className={style.banner2}>
               <img src="/banner/homepage.jpeg" alt ="homepage" />
             </div></div>
-           <div class Name={style.secondsection}>
+           <div className={style.secondsection}>
             <div className={style.bycategorysection}>
               <Heading colortitle="shop "noncolortitle="by category"/>
             <Card categories={categories}/>  
@@ -52,15 +52,12 @@ export default function HomePage({quantities,increment,decrement,totalCartCount}
                quantities={quantities}
              increment={increment}
              decrement={decrement}/>
-
-        </div>
-        
+         </div>
+      
         <About/>
-        <Cart/>
         <Contact/>
         
         </div>
-        
     </div>
   )
 }

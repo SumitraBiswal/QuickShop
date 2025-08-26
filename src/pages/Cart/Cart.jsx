@@ -19,7 +19,7 @@ export default function Cart({ cartItems=[], increment, decrement }) {
     return (
         <>
             <Navbar totalCartCount={totalQuantity} />
-            <div className={style.CartWrapper}>
+            <div className={style.cartWrapper}>
                 <h2 className={style.heading}>your Cart</h2>
                 <ul className={style.cartList}>
                     {cartItems.map(({ id, title, image, price, discount, quantity }) => {

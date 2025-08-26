@@ -9,7 +9,7 @@ export default function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (username === "admin" && password === "1234") {
+    if (username.trim()!==""&& !isNaN(password)&&password !=="") {
       localStorage.setItem("isLoggedIn", "true");
       alert("Login Successful");
       navigate("/"); 
