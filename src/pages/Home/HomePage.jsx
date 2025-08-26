@@ -21,10 +21,13 @@ export default function HomePage({quantities,increment,decrement,totalCartCount}
             <img src="/banner/banner.jpg" alt="banner" className='bannerfull'/>
             </div>
             <div className={style.text}>
-              <h2>Make Healthy Life with Fresh Grocery</h2>
+              <h2>Make Healthy Life with <span>Fresh</span> Grocery</h2>
               <p>Choose fresh fruits, vegetable and other grocery to stay healthy and energetic.
                 we deliver fresh grocery right to your door step.
               </p>
+              <button className={style.shopBtn}>Shop Now  </button>
+            </div><div className={style.banner2}>
+              <img src="/banner/homepage.jpeg" alt ="homepage" />
             </div>
            
             <Heading colortitle="shop "noncolortitle="by category"/>

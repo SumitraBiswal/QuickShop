@@ -63,7 +63,7 @@ export default function Navbar({ totalCartCount }) {
          setsLogged(false);
          navigate("/login")
     }
-    const handleLoginClick=()=>{navigate("/loggin")}
+    const handleLoginClick=()=>{navigate("/login")}
     return (
         <>
             <div className={style.navbarcontainer}>
@@ -115,10 +115,18 @@ export default function Navbar({ totalCartCount }) {
                             </NavLink>
                         </li>
                         {!isLogged?(
-                            <li><button onClick={handleLoginClick}
-                            className={style.loginBtn}>Login</button></li>):(
-                             <li><button onClick={handleLogout}
-                            className={style.loginBtn}>Logout</button></li>
+                            <li>
+                                <NavLink to="/login" 
+                            className={({isActive})=>(isActive?style.activeLink:"")}
+                            >
+                                Login
+                                </NavLink></li>):(
+                             <li>
+                                <NavLink to="/login">
+                                <button onClick={handleLogout}
+                            className={({isActive})=>(isActive?style.activeLink:"")}>Logout</button>
+                            </NavLink>
+                            </li>
                         )}
                     </ul>
                 )}
@@ -229,7 +237,7 @@ export default function Navbar({ totalCartCount }) {
                             {localStorage.getItem("isLoggedIn")?(
                                 <button onClick={()=>{localStorage.removeItem("isLoggedIn");
 
-                                }} className="style.loggoutBtn">
+                                }} className="style.logoutBtn">
                                  Logout
                                 </button>):(
                                     <NavLink
