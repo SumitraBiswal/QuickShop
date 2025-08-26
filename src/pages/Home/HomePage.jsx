@@ -8,15 +8,14 @@ import SubcategoryList from '../../usablecomponent/SubcategoryList';
 import About from './About';
 import Contact from './contact';
 import subCategories from '../../Component/Data/subCategories';
-
-
+import Cart from '../Cart/Cart';
 
 
 export default function HomePage({quantities,increment,decrement,totalCartCount}) {
   return (
     <div>
         <Navbar totalCartCount={totalCartCount}/>
-        <div > 
+        <div> 
             
             <Heading colortitle="shop "noncolortitle="by category"/>
             <Card categories={categories}/>
@@ -38,6 +37,7 @@ export default function HomePage({quantities,increment,decrement,totalCartCount}
         </div>
         <Contact/>
         <About/>
+        <Cart/>
         
         
         

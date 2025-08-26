@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { BsCart4 } from "react-icons/bs";
-import logo from "../assets/grocery/logo.gif"
+import logo from "../assets/grocery/logo2.gif"
 import { NavLink, useNavigate } from "react-router-dom"
 import subCategories from "./Data/subCategories";
 import { IoMenu } from "react-icons/io5";
@@ -54,7 +54,7 @@ export default function Navbar({ totalCartCount }) {
         setSearchTerm("");
         setSearchResults([]);
         setsidebarOpen(false);
-        navigate(`/subcategory/${sub.categoryid}`);
+        navigate(`/subcategory/${sub.categoryId}`);
     }
     return (
         <>

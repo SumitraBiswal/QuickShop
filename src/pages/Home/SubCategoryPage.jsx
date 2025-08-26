@@ -5,7 +5,7 @@ import subCategories from '../../Component/Data/subCategories';
 import SubcategoryList from '../../usablecomponent/SubcategoryList';
 import style from './subCategoryPage.module.css';
 import Heading from'../../usablecomponent/Heading';
-import Footer from "./Footer";
+
 
 
 
@@ -25,7 +25,7 @@ quantities={quantities}
 increment={increment}
 decrement={decrement}
 />
-<Footer/>
+
 </div>
   );
 }

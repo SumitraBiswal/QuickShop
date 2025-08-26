@@ -72,7 +72,7 @@ setQuantities(prev=>{
       }
       />
       <Route
-      path="/subcategory/:categoryid"
+      path="/subcategory/:categoryId"
       element={
         <SubCategoryPage
         quantities={quantities}

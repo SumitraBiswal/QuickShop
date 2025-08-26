@@ -3,7 +3,7 @@ import subCategories from "../../Component/Data/subCategories";
 import style from "./ProductPage.module.css"; 
 
 export default function ProductPage() {
-  const { id } = useParams();
+  const { Id } = useParams();
   const product = subCategories.find((item) => item.id.toString() === id);
 
   if (!product) {
