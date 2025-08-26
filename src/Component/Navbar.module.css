@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #e0a346;
+    background-color: hsla(98, 35%, 43%, 0.575);
     padding: 12px 30px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
     font-family: "Poppins", sans-serif;
@@ -14,6 +14,7 @@
     z-index: 9999;
     flex-wrap: nowrap; 
     font-size: large;
+    
   }
   
   .logo {
@@ -235,7 +236,7 @@
   }
   
   .sidebarNavlinks li:hover {
-    color: #4caf50;
+    color: #72bd5b;
   }
   .searchResultsList {
     position: absolute;

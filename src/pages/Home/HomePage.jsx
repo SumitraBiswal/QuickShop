@@ -18,8 +18,9 @@ export default function HomePage({quantities,increment,decrement,totalCartCount}
         <Navbar totalCartCount={totalCartCount}/>
         <div className={style.homepage}> 
             <div>
-            <img src="/banner/banner.jpg" alt="banner" className='bannerfull'/>
+            <img src="/banner/banner11.jpeg" alt="banner" className={style.bannerfull}/>
             </div>
+            <div className={style.banner2}>
             <div className={style.text}>
               <h2>Make Healthy Life with <span>Fresh</span> Grocery</h2>
               <p>Choose fresh fruits, vegetable and other grocery to stay healthy and energetic.
@@ -28,7 +29,7 @@ export default function HomePage({quantities,increment,decrement,totalCartCount}
               <button className={style.shopBtn}>Shop Now  </button>
             </div><div className={style.banner2}>
               <img src="/banner/homepage.jpeg" alt ="homepage" />
-            </div>
+            </div></div>
            <div class Name={style.secondsection}>
             <div className={style.bycategorysection}>
               <Heading colortitle="shop "noncolortitle="by category"/>
