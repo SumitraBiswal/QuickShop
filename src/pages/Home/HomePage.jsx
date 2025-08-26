@@ -29,9 +29,12 @@ export default function HomePage({quantities,increment,decrement,totalCartCount}
             </div><div className={style.banner2}>
               <img src="/banner/homepage.jpeg" alt ="homepage" />
             </div>
-           
-            <Heading colortitle="shop "noncolortitle="by category"/>
-            <Card categories={categories}/>
+           <div class Name={style.secondsection}>
+            <div className={style.bycategorysection}>
+              <Heading colortitle="shop "noncolortitle="by category"/>
+            <Card categories={categories}/>  
+            </div>
+            
              <Heading colortitle="Seasonal "noncolortitle="Fruit Collection"/>
              <VegetableCard
              quantities={quantities}
@@ -40,7 +43,7 @@ export default function HomePage({quantities,increment,decrement,totalCartCount}
              />
              
              
-              <Heading colortitle="Seasonal Farmm-Fresh "noncolortitle="Vegetables"/>
+              <Heading colortitle="Seasonal Farm-Fresh "noncolortitle="Vegetables"/>
               <FruitCard quantities={quantities} increment={increment} decrement={decrement}/>
                <Heading colortitle="find "noncolortitle="what you Need"/>
                <SubcategoryList 
@@ -50,11 +53,12 @@ export default function HomePage({quantities,increment,decrement,totalCartCount}
              decrement={decrement}/>
 
         </div>
-        <Contact/>
+        
         <About/>
         <Cart/>
+        <Contact/>
         
-        
+        </div>
         
     </div>
   )
