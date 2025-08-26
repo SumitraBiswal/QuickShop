@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Navbar from '../../Component/Navbar';
 import subCategories from '../../Component/Data/subCategories';
 import SubcategoryList from '../../usablecomponent/SubcategoryList';
-import style from './subCategoryPage.module.css';
+import style from './SubCategoryPage.module.css';
 import Heading from'../../usablecomponent/Heading';
 
 
