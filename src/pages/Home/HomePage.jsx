@@ -9,14 +9,24 @@ import About from './About';
 import Contact from './contact';
 import subCategories from '../../Component/Data/subCategories';
 import Cart from '../Cart/Cart';
+import style from './HomePage.module.css'
 
 
 export default function HomePage({quantities,increment,decrement,totalCartCount}) {
   return (
-    <div>
+    <div className={style.container}>
         <Navbar totalCartCount={totalCartCount}/>
-        <div> 
-            
+        <div className={style.homepage}> 
+            <div>
+            <img src="/banner/banner.jpg" alt="banner" className='bannerfull'/>
+            </div>
+            <div className={style.text}>
+              <h2>Make Healthy Life with Fresh Grocery</h2>
+              <p>Choose fresh fruits, vegetable and other grocery to stay healthy and energetic.
+                we deliver fresh grocery right to your door step.
+              </p>
+            </div>
+           
             <Heading colortitle="shop "noncolortitle="by category"/>
             <Card categories={categories}/>
              <Heading colortitle="Seasonal "noncolortitle="Fruit Collection"/>
@@ -25,6 +35,8 @@ export default function HomePage({quantities,increment,decrement,totalCartCount}
              increment={increment}
              decrement={decrement}
              />
+             
+             
               <Heading colortitle="Seasonal Farmm-Fresh "noncolortitle="Vegetables"/>
               <FruitCard quantities={quantities} increment={increment} decrement={decrement}/>
                <Heading colortitle="find "noncolortitle="what you Need"/>
@@ -44,42 +56,3 @@ export default function HomePage({quantities,increment,decrement,totalCartCount}
     </div>
   )
 }
-/**export default function HomePage({quantities, increment, decrement, totalCartCount}) {
-  return (
-    <div className={styles.homePage}>
-        <Navbar totalCartCount={totalCartCount}/>
-        <div className={styles.section}> 
-            <Heading className={styles.heading} colortitle="shop " noncolortitle="by category"/>
-            <Card className={styles.cardContainer} categories={categories}/>
-            <Heading className={styles.heading} colortitle="Seasonal " noncolortitle="Fruit Collection"/>
-            <VegetableCard 
-                className={styles.vegetableContainer}
-                quantities={quantities}
-                increment={increment}
-                decrement={decrement}
-            />
-            <Heading className={styles.heading} colortitle="Seasonal Farm-Fresh" noncolortitle="Vegetables"/>
-            <FruitCard 
-                className={styles.fruitContainer} 
-                quantities={quantities} 
-                increment={increment} 
-                decrement={decrement}
-            />
-            <Heading className={styles.heading} colortitle="find " noncolortitle="what you Need"/>
-            <SubcategoryList 
-                className={styles.subcategoryContainer}
-                subCategories={subCategories}
-                quantities={quantities}
-                increment={increment}
-                decrement={decrement}
-            />
-        </div>
-        <Contact className={styles.contactSection}/>
-        <About className={styles.aboutSection}/>
-        <Cart className={styles.cartSection}/>
-        <Footer className={styles.footer}/>
-    </div>
-  )
-}
- 
-**/

@@ -13,6 +13,7 @@ export default function Navbar({ totalCartCount }) {
     const [isMobile, setIsMobile] = useState(false);
     const [searchTerm, setSearchTerm] = useState("");
     const [searchResults, setSearchResults] = useState([]);
+    const [isLogged,setsLogged]=useState(false);
     const navigate = useNavigate();
     const searchRef = useRef(null);
 
@@ -56,6 +57,13 @@ export default function Navbar({ totalCartCount }) {
         setsidebarOpen(false);
         navigate(`/subcategory/${sub.categoryId}`);
     }
+    const handleLogout=()=>{
+        localStorage.removeItem("isLoggedIn");
+         localStorage.removeItem("isSkipped");
+         setsLogged(false);
+         navigate("/login")
+    }
+    const handleLoginClick=()=>{navigate("/loggin")}
     return (
         <>
             <div className={style.navbarcontainer}>
@@ -106,6 +114,12 @@ export default function Navbar({ totalCartCount }) {
                                 Contact Us
                             </NavLink>
                         </li>
+                        {!isLogged?(
+                            <li><button onClick={handleLoginClick}
+                            className={style.loginBtn}>Login</button></li>):(
+                             <li><button onClick={handleLogout}
+                            className={style.loginBtn}>Logout</button></li>
+                        )}
                     </ul>
                 )}
                 <div className={style.Rightside}>
@@ -211,6 +225,20 @@ export default function Navbar({ totalCartCount }) {
                                     Contact Us
                                 </NavLink>
                             </li>
+                           <li>
+                            {localStorage.getItem("isLoggedIn")?(
+                                <button onClick={()=>{localStorage.removeItem("isLoggedIn");
+
+                                }} className="style.loggoutBtn">
+                                 Logout
+                                </button>):(
+                                    <NavLink
+                                    to="/login"
+                                    className={({isActive})=>(isActive ? style.activeLink : "")}>
+                                        Login
+                                    </NavLink>
+                            )}
+                           </li>
                         </ul>
                     </nav>
                 </>

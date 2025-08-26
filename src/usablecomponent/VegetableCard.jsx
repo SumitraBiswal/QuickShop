@@ -2,7 +2,6 @@
 import subCategories from '../Component/Data/subCategories';
 import style from './VegetableCard.module.css'
 
-
 export default function VegetableCard({quantities,increment,decrement}) {
     const vegetables=subCategories.filter(item=>item.categoryId===2);
   return (

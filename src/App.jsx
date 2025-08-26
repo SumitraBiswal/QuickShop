@@ -1,9 +1,8 @@
 import { useState } from "react";
-
 import Home from './pages/Home/HomePage'
 import  {  Routes,Route } from 'react-router-dom';
 import Cart from './pages/Cart/Cart';
-
+import "./App.css"
 import SubCategoryPage from "./pages/Home/SubCategoryPage";
 import About from './pages/Home/About';
 import Product from './pages/Home/Product';
@@ -13,6 +12,7 @@ import ScrollToTop from "./pages/Home/ScrollToTop";
 import Contact from "./pages/Home/contact";
 import Footer from "./pages/Home/Footer";
 import Navbar from "./Component/Navbar";
+import Login from "./pages/Home/Login";
 
 
 
@@ -49,6 +49,7 @@ setQuantities(prev=>{
     <Navbar totalCartCount={totalCartCount}/>
     <ScrollToTop/>
     <Routes>
+      <Route path="/login" element={<Login/>}/>
       <Route
       path="/"
       element={

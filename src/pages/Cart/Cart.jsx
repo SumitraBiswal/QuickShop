@@ -12,7 +12,7 @@ export default function Cart({ cartItems=[], increment, decrement }) {
     if (cartItems.length === 0) {
         return (<>
             <Navbar totalCartCount={0} />
-            <div calassName={style.emptyCart}>Your Cart is Empty.</div>
+            <div className={style.emptyCart}>Your Cart is Empty.</div>
             
         </>);
     }
