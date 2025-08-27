@@ -1,6 +1,6 @@
 import category1 from "../../assets/grocery/vegetables.jpeg"
 import category2 from "../../assets/grocery/fruits.jpeg"
-import category3 from "../../assets/grocery/dairy.jpeg"
+import category3 from "../../assets/grocery/Dairy.jpeg"
 import category4 from "../../assets/grocery/Bakery.jpeg"
 import category5 from "../../assets/grocery/Beverages.jpeg"
 const categories =[

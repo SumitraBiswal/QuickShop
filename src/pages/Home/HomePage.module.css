@@ -87,7 +87,7 @@
 }
 
 /* Responsive: stack text and image on small screens */
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .homepage {
     flex-direction: column;
     text-align: center;
@@ -99,10 +99,11 @@
 
   .banner2 img {
     width: 100%;
-    max-width: 350px;
+    max-width: 100px;
   }
   .bannerfull{
-    margin-top: 200px;
+    margin-top: 150px;
+    width: 100%;
   }
   .text h2{
     font-size: 2rem;
@@ -111,18 +112,20 @@
     font-size: 1rem;
   }
 }
-.bycategory{
-    display: flex;
-    flex-direction: column;
+.bycategorysection{
+     display: flex;
+     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 10px;
     margin: 2rem auto;
     flex-wrap: wrap;
     padding: 12px;
     border-radius: 12px;
+
+    
 }
-.bycategory img{
-    width: 100%;
+.bycategorysection img{
+    width: 250px;
     height: 140px;
     overflow: hidden;
     border-radius: 12px;
@@ -130,6 +133,7 @@
     cursor: pointer;
     transition: transform 0.3s ease;
     object-fit: contain;
+    
 }
 .bycategory img:hover{
     transform: scale(1.05);
