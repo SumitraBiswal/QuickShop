@@ -1,5 +1,5 @@
 .aboutContainer {
-  height: 120vh;
+ min-height: 120vh;
   max-width: 90rem;
   margin: 12rem auto 5rem; 
   padding: 3rem 2rem;
