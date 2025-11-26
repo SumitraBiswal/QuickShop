@@ -1,8 +1,9 @@
-
+import { useNavigate } from "react-router-dom";
 import Navbar from "../../Component/Navbar";
 import style from "./Cart.module.css"
 
 export default function Cart({ cartItems=[], increment, decrement }) {
+    const navigate =useNavigate();
     const totalPrice = cartItems.reduce((acc, item) => {
         const discountedPrice = item.price - item.discount;
         return acc + discountedPrice * item.quantity;
@@ -63,7 +64,7 @@ export default function Cart({ cartItems=[], increment, decrement }) {
 
                 </div>
                 <button className={style.checkoutBtn}
-                    onClick={() => alert("Proceed to checkout")}
+                    onClick={() =>{ alert("Proceed to checkout"); navigate("/")}}
                     aria-label="Proceed to checkout">
                         Checkout
 

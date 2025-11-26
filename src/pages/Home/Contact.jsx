@@ -1,7 +1,7 @@
 import React from 'react';
 
 import style from './Contact.module.css'
-import Navbar from '../../Component/Navbar';
+
 
 export default function Contact({ quantities }) {
   const [result, setResult] = React.useState("");
@@ -32,7 +32,7 @@ export default function Contact({ quantities }) {
 
   return (
     <>
-      <Navbar totalCartCount={totalCartCount} />
+      
       <div className={style.contactWrapper}>
         <h2>Contact Us</h2>
         <form onSubmit={onSubmit} className={style.contactForm}>

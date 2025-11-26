@@ -1,16 +1,15 @@
 
-import Navbar from "../../Component/Navbar";
+
 import style from './About.module.css'
 
 
 
-export default function About({quantites={}}){
-    
-    const totalCartCount=Object.values( quantites||{}.reduce((sum,qty)=>sum+(Number(qty)||0),0)
-);
+export default function About(){
+   
+
+
     return(
-        <>
-        <Navbar totalCartCount={totalCartCount}/>
+      <>
         <main className={style.aboutContainer} >
 <h1> About Us</h1>
 <p>

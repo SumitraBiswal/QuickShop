@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Home from './pages/Home/HomePage'
+
 import  {  Routes,Route } from 'react-router-dom';
 import Cart from './pages/Cart/Cart';
 import "./App.css"
@@ -13,6 +13,7 @@ import Contact from "./pages/Home/Contact";
 import Footer from "./pages/Home/Footer";
 import Navbar from "./Component/Navbar";
 import Login from "./pages/Home/Login";
+import HomePage from "./pages/Home/HomePage";
 
 
 
@@ -27,8 +28,10 @@ import Login from "./pages/Home/Login";
   const decrement =(id)=>{
 setQuantities(prev=>{
   const current= prev[id]||0;
-  if(current<=0){
-    return prev;
+  if(current<=1){
+     const updated = {...prev};
+    delete updated [id];
+    return updated;
   }
   return{
     ...prev,
@@ -53,7 +56,7 @@ setQuantities(prev=>{
       <Route
       path="/"
       element={
-        <Home
+        <HomePage
         quantities={quantities}
         increment={increment }
         decrement={decrement}

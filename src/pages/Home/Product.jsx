@@ -3,8 +3,9 @@ import Heading from "../../usablecomponent/Heading"
 import style from "./Product.module.css"
 
 import subCategories from "../../Component/Data/subCategories";
-import Navbar from "../../Component/Navbar";
+
 import SubcategoryList from "../../usablecomponent/SubcategoryList";
+import { useMemo } from "react";
 
 function shuffledArray(array){
     let shuffled=array.slice();
@@ -17,11 +18,13 @@ function shuffledArray(array){
 }
     
 
-export default function Product({quantities,increment,decrement,totalCartCount}){
-    const shuffledSubCategories=shuffledArray(subCategories);
+export default function Product({quantities,increment,decrement}){
+    const shuffledSubCategories=useMemo(()=>{
+        return shuffledArray(subCategories)
+    },[]);
 return (
     <div>
-        <Navbar totalCartCount={totalCartCount}/>
+       
         <div className={style.mainContent}>
             <Heading colortitle="All" noncolortitle="PRODUCT"/>
             <SubcategoryList

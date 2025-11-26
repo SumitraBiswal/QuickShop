@@ -1,4 +1,4 @@
-import Navbar from '../../Component/Navbar';
+
 import Card from '../../usablecomponent/Card';
 import FruitCard from '../../usablecomponent/FruitCard';
 import VegetableCard from '../../usablecomponent/VegetableCard';
@@ -13,9 +13,11 @@ import style from './HomePage.module.css'
 
 
 export default function HomePage({quantities,increment,decrement,totalCartCount}) {
+    
   return (
+    <>
     <div className={style.container}>
-        <Navbar totalCartCount={totalCartCount}/>
+      
         <div className={style.homepage}> 
             <div>
             <img src="/banner/banner11.jpeg" alt="banner" className={style.bannerfull}/>
@@ -59,5 +61,6 @@ export default function HomePage({quantities,increment,decrement,totalCartCount}
         
         </div>
     </div>
+    </>
   )
 }

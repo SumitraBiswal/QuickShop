@@ -1,10 +1,10 @@
 import style from './SubcategoryList.module.css'
-import Navbar from '../Component/Navbar';
+
 export default function SubcategoryList({subCategories,increment,decrement,quantities}) {
-  const totalCartCount=Object.values(quantities).reduce((a, b)=>a+b ,0);
+ 
   return (
     <>
-    <Navbar totalCartCount={totalCartCount}/>
+ 
     <div className={style.container}>
       {subCategories.map(({id,title,image,price,discount})=>{
         const discountedPrice= price-discount;

@@ -1,18 +1,14 @@
 .mainContent {
-  margin-top:150px; 
+  margin-top:120px; 
   
 }
 @media (max-width:850px){
   .mainContent{
-    margin-top: 80px;
+    margin-top: 100px;
   }
 }
 @media (max-width:500px){
   .mainContent{
-    margin-top: 150px;
+    margin-top: 80px;
   }
 }
-
-
-
-
